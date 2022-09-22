@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "Name": "MBA chai Wala",
+      "email": "mabachaiwala@gmail.com",
+      "mobile": "9999999",
+      "address": "fca-62,gali no-3,mahavir colony,ballabgarh",
+      "services": "chai(Family Resturant)"
+    },
+    {
+      "id": 3,
+      "Name": "MBA chai Wala 1",
+      "email": "mabachaiwala@gmail.com",
+      "mobile": "gggggg",
+      "address": "fca-62,gali no-3,mahavir colony,ballabgarh",
+      "services": "chai(Family Resturant)"
+    }
+  ],
+  "signup": [
+    {
+      "name": "data",
+      "email": "data",
+      "mobile": "data",
+      "password": "ww",
+      "id": 1
+    },
+    {
+      "name": "gaurav",
+      "email": "gaurav.kaushik1101@gmail.com",
+      "mobile": "9999068570",
+      "password": "password",
+      "id": 2
+    },
+    {
+      "name": "my",
+      "email": "my",
+      "mobile": "my",
+      "password": "my",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

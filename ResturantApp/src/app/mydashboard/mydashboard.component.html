@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Resturant Record</a>
+      <div class="d-flex">
+      <button class="btn btn-success"  (click)="AddAndEditButton()" type = button data-bs-toggle="modal" data-bs-target="#exampleModal">Add Resturant
+      </button>
+      <button class="btn btn-danger mx-3" (click)="logout()">Logout</button>
+    </div>
+  </div>
+  </nav>
+  
+    <div class="h-100 p-5 text-bg-dark rounded-0">
+        <div class="container-fluid">
+      <h2>Wecome To MyResturant</h2>
+      <p>We have more than 1000000 customers across the globe.
+        Join Us Now </p>
+      <button class="btn btn-outline-light" type="button">Get paid version</button>
+    </div>
+</div>
+  
+
+  <table class="table p-5 mt-4">
+    <thead>
+        <tr>
+        <th scope="col">Resturant ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Service</th>
+        <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of alldata">
+        <td>1</td>
+        <td>{{data.Name}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.services}}</td>
+        <td>
+    <button  class="btn btn-success"  (click)="onEditbuttonclick(data)" type = button data-bs-toggle="modal" data-bs-target="#exampleModal">Edit
+            </button>&nbsp; &nbsp;
+            <button class="btn btn-danger" (click)="deleteResturantdata(data)">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Resturant Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div  class="modal-body">
+            <form [formGroup]="formValue" class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputname" class="form-label">Name</label>
+                  <input type="text" formControlName="name" class="form-control" placeholder="Resturant Name" id="inputname">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" formControlName="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                  </div>
+                <div class="col-md-12">
+                  <label for="inputemail" class="form-label">Email</label>
+                  <input type="email" formControlName="email" class="form-control" placeholder="abc@email.com" id="inputEmail4">
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="inputmobile" class="form-label">ph No.</label>
+                  <input type="text" formControlName="mobile" class="form-control" placeholder="9999999999" id="inputmobile">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputService" class="form-label">Service</label>
+                  <input type="text" formControlName="services" class="form-control" placeholder="Family Resturant" id="inputservice">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+            <button *ngIf="showAddButton" type="button"  class="btn btn-primary" (click)="addResturantData() " >Add Details</button>
+          
+         
+            <button *ngIf="showEditButton" type="button"  class="btn btn-primary" (click)="updateResturantData()" >Update Details</button>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>

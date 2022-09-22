@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "Name": "MBA chai Wala 1",
+      "email": "mabachaiwala@gmail.com",
+      "mobile": "9999999",
+      "address": "1234 pali hill mimbai",
+      "service": "chai(Family Resturant)"
+    },
+    {
+      "id": 4,
+      "Name": "MBA chai Wala 2",
+      "email": "mabachaiwala@gmail.com",
+      "mobile": "gggggg",
+      "address": "fca-62,gali no-3,mahavir colony,ballabgarh",
+      "service": "chai(Family Resturant)"
+    },
+    {
+      "id": 5,
+      "Name": "new res",
+      "email": "email1",
+      "mobile": "999",
+      "address": "address1",
+      "service": "yes"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
